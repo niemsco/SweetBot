@@ -2,11 +2,10 @@ import discord
 import os
 import redis
 
-
 from os import environ
 #environ["REPLIT_DB_URL"] = "https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NjMxOTk1MzAsImlhdCI6MTY2MzA4NzkzMCwiZGF0YWJhc2VfaWQiOiI5NWI0MjhiNy04NGE3LTQ5ODktYmZiZC01NDNhMzcxYWQzNmIiLCJ1c2VyIjoiU2NvdHROaWVtYW5uIiwic2x1ZyI6IlN3ZWV0Qm90In0.PqKEYwiSkGuYswO7NhMV5utCgk8PAhNoV81OcJCIv6FaZe7emOOG9M1KutF-n9GV_nvRLO6ordKFMq9sQdm37A"
-environ["REPLIT_DB_URL"] = "https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NjMzMjIyNzIsImlhdCI6MTY2MzIxMDY3MiwiZGF0YWJhc2VfaWQiOiI5NWI0MjhiNy04NGE3LTQ5ODktYmZiZC01NDNhMzcxYWQzNmIiLCJ1c2VyIjoiU2NvdHROaWVtYW5uIiwic2x1ZyI6IlN3ZWV0Qm90In0.FSoG-qK70XAq837M-rHcL63XxGi5dVGpngvjsYbTBQOHBLkUQePCcDdkCByRQpz8zxSsM80gsk_79VyXwwOt-g"
-from replit import db
+#environ["REPLIT_DB_URL"] = "https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE2NjMzMjIyNzIsImlhdCI6MTY2MzIxMDY3MiwiZGF0YWJhc2VfaWQiOiI5NWI0MjhiNy04NGE3LTQ5ODktYmZiZC01NDNhMzcxYWQzNmIiLCJ1c2VyIjoiU2NvdHROaWVtYW5uIiwic2x1ZyI6IlN3ZWV0Qm90In0.FSoG-qK70XAq837M-rHcL63XxGi5dVGpngvjsYbTBQOHBLkUQePCcDdkCByRQpz8zxSsM80gsk_79VyXwwOt-g"
+#from replit import db
 from messages import mainHelpText, calendar, starsmaxDetail, randQuote, helpbadge
 from recipes import getCraftsCat, getRecipeCat, floorSpellcheckCat
 from recipesdog import getCraftsDog, getRecipeDog, floorSpellcheckDog
@@ -15,6 +14,12 @@ from clubevent import maxstarshelper,goalstarshelper
 from badges import badgeAddMulti, badgeClear, getBadges
 from keep_alive import keep_alive
 r = redis.from_url(os.environ.get("REDIS_URL"))
+
+def Convert(string):
+    li = list(string.split(" "))
+    return li
+  
+
 
 def add_decos(user,decos,category):
   if category=="": category='cat'
@@ -28,10 +33,11 @@ def add_decos(user,decos,category):
 
   alreadypresent=""
   userkey=getUserKey(user,category)
-  if userkey in db.keys():
-    decoslist = db[userkey]
+  if r.exists(userkey):
+    decoslist = Convert(r.get(userkey).decode())
   else:
     decoslist = []
+  
   for x in range (minDeco, maxDeco+1):
     hash=floor+"/"+str(x)
     if hash not in decoslist:
@@ -41,7 +47,8 @@ def add_decos(user,decos,category):
   #decoslist.sort()
   #it was required to move to sorted per heroku recommendation
   sorted(decoslist);
-  db[userkey] = decoslist
+  r.set(userkey, ' '.join(decoslist))
+  #print(r.get(userkey))
 
   if len(alreadypresent)==0:
     return "Decos added. Happy crafting!"
@@ -50,8 +57,10 @@ def add_decos(user,decos,category):
 def remove_decos(user,decos,category):
   if category=="": category='cat'
   userkey=getUserKey(user,category)
-  if userkey not in db.keys(): return "You do not have any decos in your list."
-  decoslist = db[userkey]
+  if not r.exists(userkey): return "You do not have any decos in your list."
+ 
+  decoslist = Convert(r.get(userkey).decode())
+  #decoslist = db[userkey]
   
   argAry=interpretArgs(decos,category)
   if len(argAry)==0: return "Expected syntax: $remove floorname [startingdeco] [endingdeco]"
@@ -65,21 +74,23 @@ def remove_decos(user,decos,category):
     if hash in decoslist:
       decoslist.remove(hash)
   
-  db[userkey] = decoslist
+  #db[userkey] = decoslist
+  r.set(userkey, ' '.join(decoslist))
   return "Decos removed. Yeet!"
 
 def clear_decos(user, category):
   if category=="": category='cat'
   userkey=getUserKey(user, category)
-  if userkey in db.keys(): del db[userkey]
+  if r.exists(userkey): r.delete(userkey)
+  #if userkey in db.keys(): del db[userkey]
   return "Decos cleared."
 
 def show_msg(user,category):
   if category=="": category='cat'
   userkey=getUserKey(user, category)
-  if userkey not in db.keys(): return ["Planned decos: none"]
+  if not r.exists(userkey): return ["Planned decos: none"]
   
-  decoslist = db[userkey]
+  decoslist = Convert(r.get(userkey).decode())
   total=len(decoslist)
   if total==0: return ["Planned decos: none"]
     
@@ -246,28 +257,30 @@ async def on_message(message):
     try: mult = (float)(msg.split("$multiplier",1)[1])
     except: 
       await message.channel.send(errtcc())
-    db["multiplier"] = mult
+    #db["multiplier"] = mult
+    r.set("multiplier", ' '.join(mult))
     await message.channel.send("Multiplier set")
     return
 
   if msg.startswith('$room'):
-    await message.channel.send(room(db["multiplier"]))
+    await message.channel.send(room(r.get("multiplier").decode()))
     return
 
   if msg.startswith('$stars3k'):
-    await message.channel.send(stars3k(db["multiplier"]))
+    await message.channel.send(stars3k(r.get("multiplier").decode()))
     return
 
   if msg.startswith('$pot'):
     if msg.startswith('$potclear'):
       db["community pot"] = 0
+      r.set("community pot", 0)
       await message.channel.send("Community pot cleared.")
       return
     if msg.startswith('$potshow'):
-      await message.channel.send("Community pot: "+ str(db["community pot"]))
+      await message.channel.send("Community pot: "+ str(r.get("community pot").decode()))
       return
     mats = msg.split("$pot",1)[1]
-    db["community pot"] = int(db["community pot"])+int(mats)
+    #db["community pot"] = int(db["community pot"])+int(mats)
     await message.channel.send("Mats added to community pot.")
     return
 
@@ -364,53 +377,7 @@ async def on_message(message):
     return
   #end of dog game section
     
-  if msg.startswith('$hoard'):
-    userkey = 'hoard~'+str(user)
-    if userkey not in db.keys(): db[userkey]=0
-    if msg.startswith('$hoardshow'):
-      await message.channel.send("Total: "+str(db["hoard"])+"\nMy lines: "+str(db[userkey]))
-      return
-    if msg.startswith('$hoardall'):
-      if message.author.id not in [721843920404742205,655087300140597268]:
-        await message.channel.send(randQuote())
-        return
-      outmsg="**Total:** "+str(db["hoard"])
-      keys=db.prefix("hoard~")
-      for key in keys:
-        dispkey = key.replace("hoard~","hoarddisp~")
-        if int(db[key]) > 0: outmsg=outmsg+"\n"+db[dispkey]+": "+str(db[key])
-      await message.channel.send(outmsg)
-      return
-    if msg.startswith('$hoardclear'):
-      if message.author.id not in [721843920404742205,655087300140597268]:
-        await message.channel.send(randQuote())
-        return
-      keys=db.prefix("hoard~")
-      for key in keys: del db[key]
-      db["hoard"]=0
-      await message.channel.send("Hoard reset!")
-      return
 
-    #otherwise message is $hoard or $hoardremove
-    if msg.startswith('$hoardremove'):
-      lines = msg.split("$hoardremove",1)[1]
-      abs=-1
-    else: 
-      lines = msg.split("$hoard",1)[1]
-      abs=1
-    try: lines = int(lines)
-    except: 
-      await message.channel.send("Invalid line count.")
-      return
-
-    lines = lines*abs #handle negative numbers
-    db[userkey] = int(db[userkey])+lines
-    dispkey = 'hoarddisp~'+str(user)
-    if userflag==0: db[dispkey] = message.author.display_name
-    else: db[dispkey] = user
-    db["hoard"] = int(db["hoard"])+lines
-    await message.channel.send("Lines added! Total: "+ str(db["hoard"]))
-    return
 
   #Sweetling crafting bot badges :)
   if msg.startswith('$badge'):
