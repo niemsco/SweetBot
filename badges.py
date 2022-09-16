@@ -12,6 +12,7 @@ def Convert(string):
     li = list(string.split(" "))
     return li
 
+
 def badgeCategories(): # category names can't contain tilda '~', lowercase preferred
   return ['easter','catlorette','mybadges','holiday','fitness']
 
@@ -38,15 +39,16 @@ def badgeAdd(userId,category,badgeId):
   if not badgefile: return
 
   if r.exists(hash):
+    #badgelist = db[hash]
     badgelist = Convert(r.get(hash).decode())
   else:
     badgelist = []
 
   if badgefile not in badgelist:
     badgelist.append(badgefile)
-  
-  #db[hash]=badgelist
-  r.set(hash, ' '.join(badgelist))
+  r.set(badgelist.' '.join(badgelist))
+  ##db[hash]=badgelist
+
 
   return
 
@@ -83,6 +85,7 @@ def getBadges(userId,category):
   hash="badges~"+str(user)+"~"+category
   #print(hash)
   if r.exists(hash):
+    #badgeAry = db[hash]
     badgeAry = Convert(r.get(hash).decode())
     return ["",combineImg(badgeAry),getEmbedTitle(category)]
   else: 
