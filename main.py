@@ -382,7 +382,7 @@ async def on_message(message):
 
   #Sweetling crafting bot badges :)
   if msg.startswith('$badge'):
-    if message.author.id not in [721843920404742205,655087300140597268]: #Only some users can add/remove badges
+    if message.author.id not in [721843920404742205,655087300140597268,179430266895466506]: #Only some users can add/remove badges
       await message.channel.send(randQuote())
       return
     if msg.startswith('$badgeadd'):
