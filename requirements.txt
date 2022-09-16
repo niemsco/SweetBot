@@ -2,7 +2,6 @@ discord
 python-dotenv
 PyNaCl
 dnspython
-replit
 flask
 Pillow
 redis
