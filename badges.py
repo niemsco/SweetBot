@@ -46,7 +46,7 @@ def badgeAdd(userId,category,badgeId):
 
   if badgefile not in badgelist:
     badgelist.append(badgefile)
-  r.set(badgelist.' '.join(badgelist))
+  r.set(badgelist,' '.join(badgelist))
   ##db[hash]=badgelist
 
 
