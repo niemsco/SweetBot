@@ -404,7 +404,7 @@ async def on_message(message):
     await message.channel.send(ary[0])
     return
 
-# not necessary on heroku, also remove call to server object
+#  not necessary on heroku, also remove call to server object
 #keep_alive()
 
 # DISCORD_TOKEN defined in heroku env_variables 
