@@ -827,7 +827,7 @@ def photostudio(deco):
     2: "2 Water, 1 Pendant, 520 coins",
     3: "5 Water, 2 Fire, 1600 Coins",
     4: "5 Water, 2 Fire, 1600 Coins",
-    5: "4 Gold, 5 Pendant, 2700 Coins",
+    5: "4 Gold, 5 Pendants, 2700 Coins",
     6: "4 Pendant, 1 Necklace, 2700 Coins",
     7: "3 Pendant, 3 Fire, 2 Necklace, 5400 Coins"
   }
@@ -837,11 +837,11 @@ def photostudio(deco):
   switcher = {
     1: "4 Sparkles, 3 Silver, 530 coins",
     2: "4 Sparkles, 3 Silver, 530 coins",
-    3: "2 Gold, 4 Pendant, 1700 Coins",
-    4: "2 Gold, 4 Pendant, 1700 Coins",
+    3: "2 Gold, 4 Pendants, 1700 Coins",
+    4: "2 Gold, 4 Pendants, 1700 Coins",
     5: "5 Pendant, 1 Necklace, 2700 Coins",
-    6: "4 Gold, 5 Pendant, 2700 Coins",
-    7: "3 Gold, 5 Pendant, 2 Necklace, 5500 Coins"
+    6: "4 Gold, 5 Pendants, 2700 Coins",
+    7: "3 Gold, 5 Pendants, 2 Necklace, 5500 Coins"
   }
   return switcher.get(deco,"") 
 
@@ -901,7 +901,7 @@ def hospital(deco):
     4: "1 Elementstone, 1 Firestone, 1700 Coins",
     5: "4 Waterstone, 3 Fire, 3000 Coins",
     6: "6 Pendant, 1 Necklace, 3000 Coins",
-    7: "4 Gold, 6 Pendant, 2 Necklace, 6000 Coins"
+    7: "4 Gold, 6 Pendants, 2 Necklace, 6000 Coins"
   }
   return switcher.get(deco,"") 
 
