@@ -131,6 +131,7 @@ def getRecipeDog(floor,deco):
     "gothic":gothic,
     "gourmet":gourmet,
     "highfashion":highfashion,
+    "knitdoll":knitdoll,
     "kpop":kpop,
     "minigolf":minigolf,
     "ocean":ocean,
@@ -1087,6 +1088,18 @@ def gourmet(deco):
   
 #highfashion #WENDY all guess
 def highfashion(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
+def knitdoll(deco):
   switcher = {
     1: "5 Wood, 100 Coins",
     2: "5 String, 100 Coins",
