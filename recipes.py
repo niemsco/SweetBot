@@ -1223,7 +1223,7 @@ def cupcake(deco):
   }
   return switcher.get(deco,"") 
 
-def cupcakeprestiege(deco):
+def cupcakeprestige(deco):
   switcher = {
     1: "10 water, 8 fire, 8 silver, 1500 coins",
     2: "4 waterstone, 2 firestone, 10 gold, 1500 coins",
