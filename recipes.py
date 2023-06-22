@@ -1213,25 +1213,25 @@ def minigolfprestige(deco): #minigolfprestige
 
 def cupcake(deco):
   switcher = {
-    1: "5 water, 4 fire, 4 silver, 750 coins",
-    2: "2 waterstone, 1 firestone, 5 gold, 750 coins",
+    1: "5 water, 4 fire, 4 silver, 760 coins",
+    2: "2 waterstone, 1 firestone, 5 gold, 760 coins",
     3: "3 Necklace, 1 pendant, 1 Elementstone, 2400 Coins",
     4: "4 Necklace, 20 orb, 1 Elementstone, 2400 Coins",
     5: "4 Necklace, 8 silver, 8 gold, 3900 Coins",
     6: "4 waterstone, 4 firestone, 4 Elementstone, 3900 Coins",
-    7: "3 artifact, 4 Elementstone, 4 Necklace, 7800 Coins"
+    7: "3 artifact, 4 Elementstone, 4 Necklace, 7900 Coins"
   }
   return switcher.get(deco,"") 
 
 def cupcakeprestige(deco):
   switcher = {
-    1: "10 water, 8 fire, 8 silver, 1500 coins",
-    2: "4 waterstone, 2 firestone, 10 gold, 1500 coins",
-    3: "6 Necklace, 2 pendant, 2 Elementstone, 4800 Coins",
-    4: "8 Necklace, 40 orb, 2 Elementstone, 4800 Coins",
-    5: "8 Necklace, 16 silver, 16 gold, 7800 Coins",
-    6: "8 waterstone, 8 firestone, 8 Elementstone, 7800 Coins",
-    7: "6 artifact, 8 Elementstone, 8 Necklace, 15600 Coins"
+    1: "10 water, 8 fire, 8 silver, 760 coins",
+    2: "4 waterstone, 2 firestone, 10 gold, 760 coins",
+    3: "6 Necklace, 2 pendant, 2 Elementstone, 2400 Coins",
+    4: "8 Necklace, 40 orb, 2 Elementstone, 2400 Coins",
+    5: "8 Necklace, 16 silver, 16 gold, 3900 Coins",
+    6: "8 waterstone, 8 firestone, 8 Elementstone, 3900 Coins",
+    7: "6 artifact, 8 Elementstone, 8 Necklace, 7900 Coins"
   }
   return switcher.get(deco,"") 
 
