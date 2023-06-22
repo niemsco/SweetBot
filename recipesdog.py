@@ -833,7 +833,7 @@ def photostudio(deco):
   }
   return switcher.get(deco,"") 
  
-  def galaxy(deco):
+def galaxy(deco):
   switcher = {
     1: "4 Sparkles, 3 Silver, 530 coins",
     2: "4 Sparkles, 3 Silver, 530 coins",
@@ -857,7 +857,7 @@ def minobeach(deco):
   }
   return switcher.get(deco,"") 
 
-  def fruits(deco):
+def fruits(deco):
   switcher = {
     1: "1 Water, 1 Fire, 550 coins",
     2: "1 Water, 1 Fire, 550 coins",
