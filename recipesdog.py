@@ -108,6 +108,13 @@ def getRecipeDog(floor,deco):
     "wrestling":wrestling,   
     "hairsalon":hairsalon,  #50
     "beach":beach,
+    "photostudio":photostudio,
+    "galaxy":galaxy,
+    "minobeach":minobeach,
+    "fruits":fruits,
+    "minoforest":minoforest,
+    "laundromat":laundromat,
+    "hospital":hospital,
 
     # for-purchase floors - alphabetical
     "atlantis":atlantis,
@@ -813,6 +820,93 @@ def beach(deco):
     7: "4 Waterstone, 4 Fire, 3 Firestone, 5300 Coins"
   }
   return switcher.get(deco,"") 
+
+def photostudio(deco):
+  switcher = {
+    1: "2 Water, 1 Pendant, 520 coins",
+    2: "2 Water, 1 Pendant, 520 coins",
+    3: "5 Water, 2 Fire, 1600 Coins",
+    4: "5 Water, 2 Fire, 1600 Coins",
+    5: "4 Gold, 5 Pendant, 2700 Coins",
+    6: "4 Pendant, 1 Necklace, 2700 Coins",
+    7: "3 Pendant, 3 Fire, 2 Necklace, 5400 Coins"
+  }
+  return switcher.get(deco,"") 
+ 
+  def galaxy(deco):
+  switcher = {
+    1: "4 Sparkles, 3 Silver, 530 coins",
+    2: "4 Sparkles, 3 Silver, 530 coins",
+    3: "2 Gold, 4 Pendant, 1700 Coins",
+    4: "2 Gold, 4 Pendant, 1700 Coins",
+    5: "5 Pendant, 1 Necklace, 2700 Coins",
+    6: "4 Gold, 5 Pendant, 2700 Coins",
+    7: "3 Gold, 5 Pendant, 2 Necklace, 5500 Coins"
+  }
+  return switcher.get(deco,"") 
+
+def minobeach(deco):
+  switcher = {
+    1: "5 Sparkles, 7 Needles, 540 coins",
+    2: "5 Sparkles, 7 Neddles, 540 coins",
+    3: "3 Gold, 6 Silver, 1700 Coins",
+    4: "3 Gold, 6 Silver, 1700 Coins",
+    5: "9 Water, 1 Necklace, 2800 Coins",
+    6: "4 Waterstone, 2 Firestone, 2800 Coins",
+    7: "1 Artifact, 1 Elementstone, 3 Firestone, 5600 Coins"
+  }
+  return switcher.get(deco,"") 
+
+  def fruits(deco):
+  switcher = {
+    1: "1 Water, 1 Fire, 550 coins",
+    2: "1 Water, 1 Fire, 550 coins",
+    3: "3 Waterstone, 1 Firestone, 1700 Coins",
+    4: "3 Waterstone, 1 Firestone, 1700 Coins",
+    5: "6 Gold, 7 Silver, 2800 Coins",
+    6: "9 Water, 1 Necklace, 2800 Coins",
+    7: "4 Waterstone, 4 Fire, 3 Firestone, 5700 Coins"
+  }
+  return switcher.get(deco,"") 
+
+def minoforest(deco):
+  switcher = {
+    1: "1 Gold, 3 Silver, 560 coins",
+    2: "1 Gold, 3 Silver, 560 coins",
+    3: "1 Pendant, 1 Necklace, 1800 Coins",
+    4: "1 Pendant, 1 Necklace, 1800 Coins",
+    5: "4 Waterstone, 3 Fire, 2900 Coins",
+    6: "10 Water, 1 Necklace, 2900 Coins",
+    7: "4 Waterstone, 4 Fire, 3 Firestone, 5800 Coins"
+  }
+  return switcher.get(deco,"") 
+
+def laundromat(deco):
+  switcher = {
+    1: "1 Gold, 3 Silver, 570 coins",
+    2: "1 Gold, 3 Silver, 570 coins",
+    3: "2 Water, 1 Pendant, 1800 Coins",
+    4: "2 Water, 1 Pendant, 1800 Coins",
+    5: "5 Water, 5 Fire, 2900 Coins",
+    6: "1 Elementstone, 3 Firestone, 2900 Coins",
+    7: "1 Artifact, 1 Elementstone, 3 Firestone, 5900 Coins"
+  }
+  return switcher.get(deco,"") 
+
+def hospital(deco):
+  switcher = {
+    1: "1 Waterstone, 1 Fire, 520 coins",
+    2: "1 Waterstone, 1 Fire, 520 coins",
+    3: "1 Elementstone, 1 Firestone, 1700 Coins",
+    4: "1 Elementstone, 1 Firestone, 1700 Coins",
+    5: "4 Waterstone, 3 Fire, 3000 Coins",
+    6: "6 Pendant, 1 Necklace, 3000 Coins",
+    7: "4 Gold, 6 Pendant, 2 Necklace, 6000 Coins"
+  }
+  return switcher.get(deco,"") 
+
+
+
 
 
 ### purchased floors ###
