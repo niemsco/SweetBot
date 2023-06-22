@@ -58,12 +58,12 @@ def getRecipeCat(floor,deco):
   switcher = {
     # regular floors - ordered by level
     "basic":basic,    #1 - level where the floor is unlocked
-    "fancy":fancy,
-    "posh":posh,
-    "mayhem":mayhem,
-    "beach":beach,    #5
-    "farm":farm,
-    "plant":plant,
+    "fancy":fancy,"fancyprestige":fancyprestige,
+    "posh":posh,"poshprestige":poshprestige,
+    "mayhem":mayhem,"mayhemprestige":mayhemprestige,
+    "beach":beach,"beachprestige":beachprestige,
+    "farm":farm,"farmprestige":farmprestige,
+    "plant":plant,"plantprestige":plantprestige,
     "forest":forest,
     "dessert":dessert,
     "dream":dream,    #10
@@ -200,6 +200,17 @@ def fancy(deco):
     7: "11 Log, 10 Cotton, 200 Coins"
   }
   return switcher.get(deco,"")
+def fancyprestige(deco):
+  switcher = {
+    1: "4 Log, 20 Coins",
+    2: "4 Cotton, 20 Coins",
+    3: "6 Log, 4 Cotton, 50 Coins",
+    4: "10 Cotton, 50 Coins",
+    5: "6 Log, 10 Cotton, 100 Coins",
+    6: "8 Log, 8 Cotton, 100 Coins",
+    7: "22 Log, 20 Cotton, 200 Coins"
+  }
+  return switcher.get(deco,"")
 
 #posh - level 3
 def posh(deco):
@@ -211,6 +222,18 @@ def posh(deco):
     5: "10 Logs, 12 Cotton, 100 Coins",
     6: "12 Logs, 10 Cotton, 100 Coins",
     7: "21 Logs, 22 Cotton, 200 Coins"
+  }
+  return switcher.get(deco,"")
+
+def poshprestige(deco):
+  switcher = {
+    1: "10 Logs, 20 Coins",
+    2: "10 Logs, 20 Coins",
+    3: "10 Logs, 16 Cotton, 50 Coins",
+    4: "10 Logs, 16 Cotton, 50 Coins",
+    5: "20 Logs, 24 Cotton, 100 Coins",
+    6: "24 Logs, 20 Cotton, 100 Coins",
+    7: "42 Logs, 44 Cotton, 200 Coins"
   }
   return switcher.get(deco,"")
 
@@ -227,6 +250,18 @@ def mayhem(deco):
   }
   return switcher.get(deco,"")
 
+def mayhemprestige(deco):
+  switcher = {
+    1: "4 Wood, 20 Coins",
+    2: "4 String, 20 Coins",
+    3: "2 Ribbon, 4 String, 50 Coins",
+    4: "4 Wood, 2 Ribbon, 50 Coins",
+    5: "10 Wood, 10 String, 100 Coins",
+    6: "2 Ribbon, 10 String, 100 Coins",
+    7: "10 Wood, 6 Ribbon, 8 String, 200 Coins"
+  }
+  return switcher.get(deco,"")
+
 #beach - level 5
 def beach(deco):
   switcher = {
@@ -237,6 +272,18 @@ def beach(deco):
     5: "3 Ribbon, 3 String, 260 Coins",
     6: "3 Ribbon, 3 String, 260 Coins",
     7: "9 Ribbon, 520 Coins"
+  }
+  return switcher.get(deco,"")
+
+def beachprestige(deco):
+  switcher = {
+    1: "8 Wood, 50 Coins",
+    2: "8 Wood, 50 Coins",
+    3: "2 Ribbon, 12 String, 160 Coins",
+    4: "2 Ribbon, 12 String, 160 Coins",
+    5: "6 Ribbon, 6 String, 260 Coins",
+    6: "6 Ribbon, 6 String, 260 Coins",
+    7: "18 Ribbon, 520 Coins"
   }
   return switcher.get(deco,"")
 
@@ -253,6 +300,18 @@ def farm(deco):
   }
   return switcher.get(deco,"")
 
+def farmprestige(deco):
+  switcher = {
+    1: "10 String, 60 Coins",
+    2: "10 Wood, 60 Coins",
+    3: "2 Needle, 4 Metal, 190 Coins",
+    4: "12 Wood, 10 Metal, 190 Coins",
+    5: "2 Needle, 16 Metal, 310 Coins",
+    6: "2 Needle, 16 Metal, 310 Coins",
+    7: "2 Sparkle, 2 Needle, 2 Ribbon, 630 Coins"
+  }
+  return switcher.get(deco,"")
+
 #plant - level 7
 def plant(deco):
   switcher = {
@@ -265,6 +324,19 @@ def plant(deco):
     7: "1 Sparkle, 2 Needles, 2 Ribbon, 730 Coins"
   }
   return switcher.get(deco,"")
+
+def plantprestige(deco):
+  switcher = {
+    1: "4 Ribbon, 70 Coins",
+    2: "12 String, 70 Coins",
+    3: "14 Wood, 4 Ribbon, 220 Coins",
+    4: "14 Wood, 14 Metal, 220 Coins",
+    5: "4 Needles, 8 Metal, 360 Coins",
+    6: "4 Needles, 8 Metal, 360 Coins",
+    7: "2 Sparkle, 4 Needles, 4 Ribbon, 730 Coins"
+  }
+  return switcher.get(deco,"")
+
 
 #forest - level 8
 def forest(deco):
