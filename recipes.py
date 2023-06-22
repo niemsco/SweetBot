@@ -132,6 +132,7 @@ def getRecipeCat(floor,deco):
     "deli":deli, "deliprestige":deliprestige,
     "rainy":rainy, "rainyprestige":rainyprestige,
     "minigolf":minigolf, "minigolfprestige":minigolfprestige,
+    "cupcake":cupcake, "cupcakeprestige":cupcakeprestige,
 
     # for-purchase floors - alphabetical
     "aquarium":aquarium,
@@ -1207,6 +1208,18 @@ def minigolfprestige(deco): #minigolfprestige
     5: "6 Necklace, 16 waterstone, 3900 Coins",
     6: "6 artifact, 6 fire, 50 orb, 3900 Coins",
     7: "6 artifact, 16 waterstone, 16 firestone, 7800 Coins"
+  }
+  return switcher.get(deco,"") 
+
+def cupcake(deco):
+  switcher = {
+    1: "5 water, 4 fire, 4 silver, 750 coins",
+    2: "2 waterstone, 1 firestone, 5 gold, 750 coins",
+    3: "3 Necklace, 1 pendant, 1 Elementstone, 2400 Coins",
+    4: "4 Necklace, 20 orb, 1 Elementstone, 2400 Coins",
+    5: "4 Necklace, 8 silver, 8 gold, 3900 Coins",
+    6: "4 waterstone, 4 firestone, 4 Elementstone, 3900 Coins",
+    7: "3 artifact, 4 Elementstone, 4 Necklace, 7800 Coins"
   }
   return switcher.get(deco,"") 
 
