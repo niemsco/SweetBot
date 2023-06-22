@@ -145,14 +145,20 @@ def getRecipeCat(floor,deco):
     "carousel":carousel,
     "catcafe":catcafe,
     "corn":corn,
+    "costumedcats":costumedcats,
     "duck":duck,
     "freshfruit":freshfruit,
     #"garfield":garfield,
+    "gingerbreadhouse":gingerbreadhouse,
     "hatcats":hatcats, "hatcatsprestige":hatcatsprestige,
+    "hotpot":hotpot,
+    "knitdoll":knitdoll,
     "minobeach":minobeach, "minobeachprestige":minobeachprestige,
     "minoforest":minoforest, "minoforestprestige":minoforestprestige,
     "outdoorpool":outdoorpool, "outdoorpoolprestige":outdoorpoolprestige,
+    "pumpkinspice":pumpkinspice,
     "supercatsquad":supercatsquad, "supercatsquadprestige":supercatsquadprestige,
+    "vet":vet,
     "waterfight":waterfight,
     "waterpark":waterpark
 
@@ -1372,6 +1378,7 @@ def atlantis(deco):
     7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
   }
   return switcher.get(deco,"")
+
 def atlantisprestige(deco): #atlantisprestige
   switcher = {
     1: "10 Wood, 100 Coins",
@@ -1420,6 +1427,7 @@ def balconygarden(deco): #WENDY recipes unconfirmed
     7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
   }
   return switcher.get(deco,"")
+
 def balconygardenprestige(deco): #balconygardenprestige
   switcher = {
     1: "10 Wood, 100 Coins",
@@ -1494,6 +1502,18 @@ def corn(deco): #WENDY recipes unconfirmed
     7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
   }
   return switcher.get(deco,"")
+
+def costumedcats(deco): #WENDY recipes unconfirmed
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
   
 #duck
 def duck(deco): #WENDY recipes unconfirmed
@@ -1552,6 +1572,29 @@ def hatcatsprestige(deco): #hatcatsprestige
   }
   return switcher.get(deco,"")
 
+def hotpot(deco): #WENDY recipes unconfirmed
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
+def knitdoll(deco): #WENDY recipes unconfirmed
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
 #minobeach
 def minobeach(deco):
   switcher = {
@@ -1624,6 +1667,17 @@ def outdoorpoolprestige(deco): #outdoorpoolprestige
   }
   return switcher.get(deco,"")
 
+def pumpkinspice(deco): #WENDY recipes unconfirmed
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
 #supercatsquad
 def supercatsquad(deco): #WENDY not sure for most (confirmed for deco 7)
   switcher = {
@@ -1648,6 +1702,18 @@ def supercatsquadprestige(deco): #supercatsquadprestige
   }
   return switcher.get(deco,"")
 
+def vet(deco): #WENDY recipes unconfirmed
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+  
 #waterfight
 def waterfight(deco): #WENDY recipes unconfirmed
   switcher = {
