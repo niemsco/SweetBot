@@ -1223,6 +1223,18 @@ def cupcake(deco):
   }
   return switcher.get(deco,"") 
 
+def cupcakeprestiege(deco):
+  switcher = {
+    1: "10 water, 8 fire, 8 silver, 1500 coins",
+    2: "4 waterstone, 2 firestone, 10 gold, 1500 coins",
+    3: "6 Necklace, 2 pendant, 2 Elementstone, 4800 Coins",
+    4: "8 Necklace, 40 orb, 2 Elementstone, 4800 Coins",
+    5: "8 Necklace, 16 silver, 16 gold, 7800 Coins",
+    6: "8 waterstone, 8 firestone, 8 Elementstone, 7800 Coins",
+    7: "6 artifact, 8 Elementstone, 8 Necklace, 15600 Coins"
+  }
+  return switcher.get(deco,"") 
+
 
 ### purchased floors ###
 
