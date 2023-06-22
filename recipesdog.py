@@ -118,9 +118,12 @@ def getRecipeDog(floor,deco):
 
     # for-purchase floors - alphabetical
     "atlantis":atlantis,
+    "autumn":autumn,
     "carousel":carousel,
     "catfloor":catfloor,
     "cosmicunicorns":cosmicunicorns,
+    "daytimedrama":daytimedrama,
+    "desert":desert,
     "doggydaycare":doggydaycare,
     "dogspa":dogspa,
     "donutfloat":donutfloat,
@@ -131,9 +134,12 @@ def getRecipeDog(floor,deco):
     "kpop":kpop,
     "minigolf":minigolf,
     "ocean":ocean,
+    "pursedogs":pursedogs,
     "stargazing":stargazing,
     "tarot":tarot,
-    "wigs":wigs 
+    "vet":vet,
+    "wigs":wigs,
+    "yarn":yarn
   }
   func = switcher.get(floorSpellcheckDog(floor), lambda1)
   try: decoInt = int(deco)
@@ -924,6 +930,19 @@ def atlantis(deco):
   }
   return switcher.get(deco,"")
 
+def autumn(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbons, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
+
 #carousel #WENDY guessed on 2 through 7, sure of 1
 def carousel(deco):
   switcher = {
@@ -962,6 +981,31 @@ def cosmicunicorns(deco):
     7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
   }
   return switcher.get(deco,"")
+
+def daytimedrama(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbons, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
+def desert(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbons, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
 
 #doggydaycare #WENDY unsure of all recipes
 def doggydaycare(deco):
@@ -1093,6 +1137,18 @@ def ocean(deco):
   }
   return switcher.get(deco,"")
 
+def pursedogs(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbons, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
 #stargazing #WENDY all guess
 def stargazing(deco):
   switcher = {
@@ -1119,6 +1175,18 @@ def tarot(deco):
   }
   return switcher.get(deco,"")
 
+def vet(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbons, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
 #wigs #WENDY all guess
 def wigs(deco):
   switcher = {
@@ -1131,4 +1199,17 @@ def wigs(deco):
     7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
   }
   return switcher.get(deco,"")
+
+def yarn(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbons, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbons, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
 
