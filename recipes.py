@@ -158,7 +158,7 @@ def getRecipeCat(floor,deco):
     "outdoorpool":outdoorpool, "outdoorpoolprestige":outdoorpoolprestige,
     "pumpkinspice":pumpkinspice,"pumpkinspiceprestige":pumpkinspiceprestige,
     "staycation":staycation,"staycationprestige":staycationprestige,
-    "streetperformer":streetperformer,"streetperformerprestige":streeperformerprestige,
+    "streetperformer":streetperformer,"streetperformerprestige":streetperformerprestige,
     "supercatsquad":supercatsquad, "supercatsquadprestige":supercatsquadprestige,
     "vet":vet,"vetprestige":vetprestige,
     "waterfight":waterfight,"waterfightprestige":waterfightprestige,
