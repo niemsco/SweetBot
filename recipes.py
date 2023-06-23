@@ -77,24 +77,24 @@ def getRecipeCat(floor,deco):
     "ocean":ocean,"oceanprestige":oceanprestige,
     "pyramid":pyramid,"pyramidprestige":pyramidprestige,
     "cake":cake,"cakeprestige":cakeprestige,
-    "interstellar":interstellar,      
-    "punk":punk,      
-    "african":african,     
-    "profession":profession,     
-    "bugs":bugs,       #25
-    "winter":winter,
-    "spring":spring,
-    "autumn":autumn,
-    "school":school,
-    "dogs":dogs,       #30
-    "diner":diner,
-    "sports":sports,
-    "desert":desert,
-    "dinosaurs":dinosaurs,
-    "hairsalon":hairsalon, #35
-    "heavymetal":heavymetal,
-    "western":western,
-    "racing":racing,
+    "interstellar":interstellar,"interstellarprestige":interstellarprestige,      
+    "punk":punk,"punkprestige":punkprestige,      
+    "african":african,"africanprestige":africanprestige,     
+    "profession":profession,"professionprestige":professionprestige,     
+    "bugs":bugs,"bugsprestige":bugsprestige,
+    "winter":winter,"winterprestige":winterprestige,
+    "spring":spring,"springprestige":springprestige,
+    "autumn":autumn,"autumnprestige":autumnprestige,
+    "school":school,"schoolprestige":schoolprestige,
+    "dogs":dogs,"dogsprestige":dogsprestige,
+    "diner":diner,"dinerprestige":dinerprestige,
+    "sports":sports,"sportsprestige":sportsprestige,
+    "desert":desert,"desertprestige":desertprestige,
+    "dinosaurs":dinosaurs,"dinosaursprestige":dinosaursprestige,
+    "hairsalon":hairsalon,"hairsalonprestige":hairsalonprestige,
+    "heavymetal":heavymetal,"heavymetalprestige":heavymetalcakeprestige,
+    "western":western,"westernprestige":westerncakeprestige,
+    "racing":racing,"racingprestige":racingprestige,
     "mysterymansion":mysterymansion,
     "stationery":stationery,  #40
     "magicshow":magicshow,
@@ -686,6 +686,19 @@ def interstellar(deco):
   }
   return switcher.get(deco,"")
 
+def interstellarprestige(deco):
+  switcher = {
+    1: "6 Needles, 2 Silver, 210 Coins",
+    2: "10 Orb, 2 Silver, 210 Coins",
+    3: "2 Sparkles, 2 Fire, 680 Coins",
+    4: "6 Sparkles, 6 Silver, 680 Coins",
+    5: "8 Sparkles, 4 Pendants, 1100 Coins",
+    6: "6 Silver, 4 Pendants, 1100 Coins",
+    7: "8 Water, 6 Fire, 2200 Coins"
+  }
+  return switcher.get(deco,"")
+
+
 #punk - level 22
 def punk(deco):
   switcher = {
@@ -699,6 +712,19 @@ def punk(deco):
   }
   return switcher.get(deco,"")
 
+def punkprestige(deco):
+  switcher = {
+    1: "6 Ribbon, 2 Water, 220 Coins",
+    2: "6 Needles, 2 Silver, 220 Coins",
+    3: "6 Silver, 4 Water, 710 Coins",
+    4: "6 Silver, 4 Water, 710 Coins",
+    5: "8 Sparkles, 8 Water, 1100 Coins",
+    6: "4 Pendant, 2 Fire, 1100 Coins",
+    7: "2 Water, 2 Fire, 2 Necklace, 2300 Coins"
+  }
+  return switcher.get(deco,"")
+
+
 #african - level 23
 def african(deco):
   switcher = {
@@ -709,6 +735,18 @@ def african(deco):
     5: "2 Water, 2 Gold, 1200 Coins",
     6: "3 Water, 5 Sparkles, 1200 Coins", #WENDY check?
     7: "4 Sparkles, 4 Gold, 4 Silver, 2400 Coins"
+  }
+  return switcher.get(deco,"")
+
+def africanprestige(deco):
+  switcher = {
+    1: "2 Water, 10 Amethyst, 230 Coins",
+    2: "2 Water, 10 Amethyst, 230 Coins",
+    3: "4 Water, 6 Silver, 740 Coins",
+    4: "2 Gold, 2 Pendant, 740 Coins",
+    5: "4 Water, 4 Gold, 1200 Coins",
+    6: "6 Water, 10 Sparkles, 1200 Coins", #WENDY check?
+    7: "8 Sparkles, 8 Gold, 8 Silver, 2400 Coins"
   }
   return switcher.get(deco,"")
 
@@ -725,6 +763,18 @@ def profession(deco):
   }
   return switcher.get(deco,"")
 
+def professionprestige(deco):
+  switcher = {
+    1: "2 Water, 12 Amethyst, 240 Coins",
+    2: "2 Water, 10 Ribbon, 240 Coins",
+    3: "6 Sparkles, 2 Gold, 780 Coins",
+    4: "2 Waterstone, 4 Water, 780 Coins",
+    5: "2 Waterstone, 2 Firestone, 1200 Coins",
+    6: "4 Waterstone, 2 Fire, 1200 Coins",
+    7: "4 Waterstone, 8 Water, 4 Fire, 2500 Coins"
+  }
+  return switcher.get(deco,"")
+
 #bugs - level 25
 def bugs(deco):
   switcher = {
@@ -735,6 +785,18 @@ def bugs(deco):
     5: "1 Firestone, 4 Silver, 1300 Coins",
     6: "4 Sparkles, 2 Gold, 1300 Coins",
     7: "2 Waterstone, 4 Water, 2 Fire, 2600 Coins"
+  }
+  return switcher.get(deco,"")
+
+def bugsprestige(deco):
+  switcher = {
+    1: "14 Amethyst , 10 Needles, 250 Coins",
+    2: "22 Amethyst, 18 Ribbon, 250 Coins",
+    3: "2 Waterstone, 2 Pendant, 810 Coins",
+    4: "2 Waterstone, 14 Needles, 810 Coins",
+    5: "2 Firestone, 8 Silver, 1300 Coins",
+    6: "8 Sparkles, 4 Gold, 1300 Coins",
+    7: "4 Waterstone, 8 Water, 4 Fire, 2600 Coins"
   }
   return switcher.get(deco,"")
 
@@ -751,6 +813,18 @@ def winter(deco):
   }
   return switcher.get(deco,"")
 
+def winterprestige(deco):
+  switcher = {
+    1: "16 Orb , 18 Amethyst, 260 Coins",
+    2: "10 Needles, 14 Ribbon, 260 Coins",
+    3: "12 Sparkles, 12 Needles, 840 Coins",
+    4: "2 Waterstone, 4 Water, 840 Coins",
+    5: "2 Waterstone, 6 Pendants, 1300 Coins",
+    6: "2 Firestone, 12 Silver, 1300 Coins", #WENDY check?
+    7: "6 Waterstone, 6 Water, 4 Fire, 2700 Coins"
+  }
+  return switcher.get(deco,"")
+
 #spring - level 27
 def spring(deco):
   switcher = {
@@ -764,6 +838,19 @@ def spring(deco):
   }
   return switcher.get(deco,"")
 
+def springprestige(deco):
+  switcher = {
+    1: "16 Orb, 20 Amethyst, 270 Coins",
+    2: "2 Water, 6 Needles, 270 Coins",
+    3: "4 Water, 2 Gold, 870 Coins",
+    4: "2 Gold, 4 Pendants, 870 Coins",
+    5: "10 Water, 2 Fire, 1400 Coins",
+    6: "4 Gold, 4 Pendants, 1400 Coins",
+    7: "4 Waterstone, 2 Elementstone, 4 Firestone, 2800 Coins" #WENDY check
+  }
+  return switcher.get(deco,"")
+
+
 #autumn - level 28
 def autumn(deco):
   switcher = {
@@ -774,6 +861,18 @@ def autumn(deco):
     5: "6 Sparkles, 1 Firestone, 1400 Coins",
     6: "1 Firestone, 5 Silver, 1400 Coins",
     7: "3 Waterstones, 1 Elementstone, 2 Firestones, 2900 Coins" #WENDY check
+  }
+  return switcher.get(deco,"")
+
+def autumnprestige(deco):
+  switcher = {
+    1: "4 Sparkles, 14 Amethyst, 280 Coins",
+    2: "2 Water, 4 Sparkles, 280 Coins",
+    3: "2 Waterstone, 2 Fire, 910 Coins",
+    4: "4 Water, 2 Fire, 910 Coins",
+    5: "12 Sparkles, 2 Firestone, 1400 Coins",
+    6: "2 Firestone, 10 Silver, 1400 Coins",
+    7: "6 Waterstones, 2 Elementstone, 4 Firestones, 2900 Coins" #WENDY check
   }
   return switcher.get(deco,"")
 
@@ -790,6 +889,18 @@ def school(deco):
   }
   return switcher.get(deco,"")
 
+def schoolprestige(deco):
+  switcher = {
+    1: "2 Water, 12 Orb, 290 Coins",
+    2: "14 Orb, 10 Needles, 290 Coins",
+    3: "2 Fire, 18 Needles, 940 Coins",
+    4: "2 Waterstone, 6 Water, 940 Coins",
+    5: "2 Pendant, 2 Elementstone, 1500 Coins",
+    6: "14 Sparkles, 2 Firestone, 1500 Coins",
+    7: "6 Waterstone, 2 Elementstone, 4 Firestone, 3000 Coins" #WENDY check
+  }
+  return switcher.get(deco,"")
+
 #dogs - level 30
 def dogs(deco):
   switcher = {
@@ -800,6 +911,18 @@ def dogs(deco):
     5: "1 Sparkle, 1 Elementstone, 1500 Coins",
     6: "2 Waterstone, 1 Fire, 1500 Coins",
     7: "4 Water, 3 Pendants, 1 Necklace, 3100 Coins"
+  }
+  return switcher.get(deco,"")
+
+def dogsprestige(deco):
+  switcher = {
+    1: "2 Water, 14 Orbs, 300 Coins",
+    2: "2 Water, 4 Sparkles, 300 Coins",
+    3: "2 Fire, 20 Needles, 970 Coins",
+    4: "2 Fire, 2 Firestone, 970 Coins",
+    5: "2 Sparkle, 2 Elementstone, 1500 Coins",
+    6: "4 Waterstone, 2 Fire, 1500 Coins",
+    7: "8 Water, 6 Pendants, 2 Necklace, 3100 Coins"
   }
   return switcher.get(deco,"")
 
@@ -816,6 +939,18 @@ def diner(deco):
   }
   return switcher.get(deco,"")
 
+def dinerprestige(deco):
+  switcher = {
+    1: "2 Water, 4 Sparkles, 310 Coins",
+    2: "4 Needles, 4 Silver, 310 Coins",
+    3: "2 Firestone, 2 Silver, 990 Coins",
+    4: "2 Waterstone, 6 Water, 990 Coins",
+    5: "6 Pendants, 2 Firestone, 1600 Coins",
+    6: "4 Sparkles, 2 Elementstone, 1600 Coins",
+    7: "4 Waterstone, 2 Elementstone, 4 Firestone, 3200 Coins"
+  }
+  return switcher.get(deco,"")
+
 #sports - level 32
 def sports(deco):
   switcher = {
@@ -826,6 +961,18 @@ def sports(deco):
     5: "2 Waterstone, 6 Sparkles, 1600 Coins",
     6: "1 Fire, 1 Elementstone, 1600 Coins",
     7: "5 Water, 2 Fire, 1 Necklace, 3300 Coins"
+  }
+  return switcher.get(deco,"")
+
+def sportsprestige(deco):
+  switcher = {
+    1: "2 Water, 4 Sparkles, 320 Coins",
+    2: "2 Water, 10 Needles, 320 Coins",
+    3: "2 Pendant, 2 Firestone, 1000 Coins",
+    4: "8 Sparkles, 2 Fire, 1000 Coins",
+    5: "4 Waterstone, 12 Sparkles, 1600 Coins",
+    6: "2 Fire, 2 Elementstone, 1600 Coins",
+    7: "10 Water, 4 Fire, 2 Necklace, 3300 Coins"
   }
   return switcher.get(deco,"")
 
@@ -842,6 +989,18 @@ def desert(deco):
   }
   return switcher.get(deco,"")
 
+def desertprestige(deco):
+  switcher = {
+    1: "2 Water, 4 Silver, 330 Coins",
+    2: "16 Orbs, 12 Needles, 330 Coins",
+    3: "6 Water, 10 Sparkles, 1000 Coins",
+    4: "8 Water, 2 Gold, 1000 Coins",
+    5: "2 Gold, 2 Elementstone, 1700 Coins",
+    6: "8 Sparkles, 8 Pendants, 1700 Coins",
+    7: "4 Waterstone, 2 Elementstone, 4 Firestone, 3400 Coins"
+  }
+  return switcher.get(deco,"")
+
 #dinosaurs - level 34
 def dinosaurs(deco):
   switcher = {
@@ -852,6 +1011,18 @@ def dinosaurs(deco):
     5: "4 Water, 2 Fire, 1700 Coins",
     6: "1 Elementstone, 3 Silver, 1700 Coins",
     7: "3 Waterstone, 2 Fire, 2 Firestone, 3500 Coins"
+  }
+  return switcher.get(deco,"")
+
+def dinosaursprestige(deco):
+  switcher = {
+    1: "4 Sparkles, 10 Needles, 340 Coins",
+    2: "2 Pendant, 2 Orb, 340 Coins",
+    3: "10 Sparkles, 10 Silver, 1100 Coins",
+    4: "10 Sparkles, 2 Fire, 1100 Coins",
+    5: "8 Water, 4 Fire, 1700 Coins",
+    6: "2 Elementstone, 6 Silver, 1700 Coins",
+    7: "6 Waterstone, 4 Fire, 4 Firestone, 3500 Coins"
   }
   return switcher.get(deco,"")
 
@@ -868,6 +1039,19 @@ def hairsalon(deco):
   }
   return switcher.get(deco,"")
 
+def hairsalonprestige(deco):
+  switcher = {
+    1: "2 Water, 20 Orbs, 350 Coins",
+    2: "16 Ribbon, 4 Silver, 350 Coins",
+    3: "6 Water, 10 Silver, 1100 Coins",
+    4: "4 Pendants, 2 Fire, 1100 Coins",
+    5: "12 Water, 16 Sparkles, 1800 Coins",
+    6: "2 Fire, 2 Elementstone, 1800 Coins",
+    7: "12 Water, 8 Pendant, 2 Necklace, 3600 Coins" #WENDY wiki said 1800 but this is my best guess
+  }
+  return switcher.get(deco,"")
+
+
 #heavymetal - level 36
 def heavymetal(deco):
   switcher = {
@@ -878,6 +1062,18 @@ def heavymetal(deco):
     5: "2 Pendants, 1 Elementstone, 1800 Coins",
     6: "2 Water, 2 Firestone, 1800 Coins",
     7: "3 Waterstone, 1 Elementstone, 2 Firestone, 3700 Coins"
+  }
+  return switcher.get(deco,"")
+
+def heavymetalprestige(deco):
+  switcher = {
+    1: "14 Orb, 4 Silver, 360 Coins",
+    2: "14 Orb, 4 Silver, 360 Coins",
+    3: "8 Water, 8 Sparkles, 1200 Coins",
+    4: "4 Pendants, 2 Fire, 1200 Coins",
+    5: "4 Pendants, 2 Elementstone, 1800 Coins",
+    6: "4 Water, 4 Firestone, 1800 Coins",
+    7: "6 Waterstone, 2 Elementstone, 4 Firestone, 3700 Coins"
   }
   return switcher.get(deco,"")
 
@@ -894,6 +1090,18 @@ def western(deco):
   }
   return switcher.get(deco,"")
 
+def westernprestige(deco):
+  switcher = {
+    1: "8 Needles, 4 Silver, 370 Coins",
+    2: "2 Water, 4 Sparkles, 370 Coins",
+    3: "8 Water, 2 Fire, 1200 Coins",
+    4: "2 Waterstone, 2 Firestone, 1200 Coins",
+    5: "8 Water, 4 Fire, 1900 Coins",
+    6: "4 Water, 4 Firestone, 1900 Coins",
+    7: "6 Waterstone, 2 Elementstone, 4 Firestone, 3800 Coins"
+  }
+  return switcher.get(deco,"")
+
 #racing - level 38
 def racing(deco):
   switcher = {
@@ -906,6 +1114,19 @@ def racing(deco):
     7: "4 Waterstone, 1 Elementstone, 2 Firestone, 3900 Coins"
   }
   return switcher.get(deco,"")
+
+def racingprestige(deco):
+  switcher = {
+    1: "6 Sparkles, 16 Ribbon, 380 Coins",
+    2: "2 Water, 6 Sparkles, 380 Coins",
+    3: "4 Waterstone, 4 Silver, 1200 Coins",
+    4: "2 Fire, 10 Silver, 1200 Coins",
+    5: "18 Sparkles, 18 Silver, 1900 Coins",
+    6: "4 Pendant, 2 Elementstone, 1900 Coins",
+    7: "8 Waterstone, 2 Elementstone, 4 Firestone, 3900 Coins"
+  }
+  return switcher.get(deco,"")
+
 
 #mysterymansion - level 39
 def mysterymansion(deco):
