@@ -64,19 +64,19 @@ def getRecipeCat(floor,deco):
     "beach":beach,"beachprestige":beachprestige,
     "farm":farm,"farmprestige":farmprestige,
     "plant":plant,"plantprestige":plantprestige,
-    "forest":forest,
-    "dessert":dessert,
-    "dream":dream,    #10
-    "woods":woods,
-    "galactic":galactic,
-    "eighties":eighties,
-    "oasis":oasis,
-    "reef":reef,      #15
-    "garden":garden,
-    "nightmare":nightmare,
-    "ocean":ocean,
-    "pyramid":pyramid,
-    "cake":cake,      #20
+    "forest":forest,"forestprestige":forestprestige,
+    "dessert":dessert,"dessertprestige":dessertprestige,
+    "dream":dream,"dreanprestige":dreamprestige,
+    "woods":woods,"woodsprestige":woodsprestige,
+    "galactic":galactic,"galacticprestige":galacticprestige,
+    "eighties":eighties,"eightiesprestige":eightiesprestige,
+    "oasis":oasis,"oasisprestige":oasisprestige,
+    "reef":reef,"reefprestige":reefprestige,
+    "garden":garden,"gardenprestige":gardenprestige,
+    "nightmare":nightmare,"nightmareprestige":nightmareprestige,
+    "ocean":ocean,"oceanprestige":oceanprestige,
+    "pyramid":pyramid,"pyramidprestige":pyramidprestige,
+    "cake":cake,"cakeprestige":cakeprestige,
     "interstellar":interstellar,      
     "punk":punk,      
     "african":african,     
@@ -359,6 +359,18 @@ def forest(deco):
   }
   return switcher.get(deco,"")
 
+def forestprestige(deco):
+  switcher = {
+    1: "14 Wood, 80 Coins",
+    2: "14 String, 80 Coins",
+    3: "4 Ribbons, 2 Needles, 260 Coins",
+    4: "4 Ribbons, 2 Needle, 260 Coins",
+    5: "2 Needle, 2 Sparkles, 420 Coins",
+    6: "18 Metal, 4 Needles, 420 Coins",
+    7: "8 Ribbons, 6 Needles, 2 Sparkles, 840 Coins"
+  }
+  return switcher.get(deco,"")
+
 #dessert - level 9
 def dessert(deco):
   switcher = {
@@ -369,6 +381,18 @@ def dessert(deco):
     5: "4 Ribbons, 1 Sparkles, 470 Coins",
     6: "4 Ribbons, 1 Sparkles, 470 Coins",
     7: "3 Ribbon, 3 Needles, 2 Sparkles, 940 Coins"
+  }
+  return switcher.get(deco,"")
+
+def dessertprestige(deco):
+  switcher = {
+    1: "6 Ribbon, 90 Coins",
+    2: "16 Metal, 90 Coins",
+    3: "12 Metal, 4 Needles, 290 Coins",
+    4: "12 Metal, 4 Needles, 290 Coins",
+    5: "8 Ribbons, 2 Sparkles, 470 Coins",
+    6: "8 Ribbons, 2 Sparkles, 470 Coins",
+    7: "6 Ribbon, 6 Needles, 4 Sparkles, 940 Coins"
   }
   return switcher.get(deco,"")
 
@@ -385,6 +409,18 @@ def dream(deco):
   }
   return switcher.get(deco,"")
 
+def dreamprestige(deco):
+  switcher = {
+    1: "2 Wood, 2 Needle, 100 Coins",
+    2: "2 Wood, 2 Needle, 100 Coins",
+    3: "6 Metal, 2 Sparkles, 320 Coins",
+    4: "2 Needle, 2 Sparkles, 320 Coins",
+    5: "12 Ribbon, 2 Sparkles, 520 Coins",
+    6: "8 Needles, 16 Bronze, 520 Coins",
+    7: "8 Needles, 4 Sparkles, 2 Silver, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
 #woods - level 11
 def woods(deco):
   switcher = {
@@ -395,6 +431,18 @@ def woods(deco):
     5: "2 Needles, 2 Sparkles, 570 Coins",
     6: "4 Needles, 1 Silver, 570 Coins",
     7: "1 Sparkles, 1 Silver, 1 Gold, 1100 Coins"
+  }
+  return switcher.get(deco,"")
+
+def woodsprestige(deco):
+  switcher = {
+    1: "12 Wood, 2 Needle, 110 Coins",
+    2: "10 Metal, 10 Bronze, 110 Coins",
+    3: "8 Ribbon, 2 Sparkles, 350 Coins",
+    4: "8 Bronze, 2 Silver, 350 Coins",
+    5: "4 Needles, 4 Sparkles, 570 Coins",
+    6: "8 Needles, 2 Silver, 570 Coins",
+    7: "2 Sparkles, 2 Silver, 2 Gold, 1100 Coins"
   }
   return switcher.get(deco,"")
 
@@ -411,6 +459,18 @@ def galactic(deco):
   }
   return switcher.get(deco,"")
 
+def galacticprestige(deco):
+  switcher = {
+    1: "12 Wood, 22 String, 120 Coins", #WENDY check?
+    2: "16 String, 14 Bronze, 120 Coins",
+    3: "16 Ribbon, 2 Sparkles, 390 Coins",
+    4: "2 Sparkles, 2 Silver, 390 Coins",
+    5: "6 Sparkles, 2 Silver, 630 Coins",
+    6: "16 Ribbons, 14 Needles, 630 Coins",
+    7: "8 Needles, 6 Sparkles, 6 Silver, 1200 Coins"
+  }
+  return switcher.get(deco,"")
+
 #eighties - level 13
 def eighties(deco):
   switcher = {
@@ -424,6 +484,19 @@ def eighties(deco):
   }
   return switcher.get(deco,"")
 
+def eightiesprestige(deco):
+  switcher = {
+    1: "26 Wood, 24 Metal, 130 Coins",
+    2: "10 Wood, 10 Ribbon, 130 Coins",
+    3: "4 Sparkles, 2 Silver, 420 Coins",
+    4: "20 Ribbon, 2 Silver, 420 Coins",
+    5: "8 Needles, 6 Sparkles, 680 Coins",
+    6: "12 Needles, 4 Silver, 680 Coins",
+    7: "8 Sparkles, 4 Silver, 2 Gold, 1300 Coins"
+  }
+  return switcher.get(deco,"")
+
+
 #oasis - level 14
 def oasis(deco):
   switcher = {
@@ -434,6 +507,18 @@ def oasis(deco):
     5: "1 Silver, 1 Gold, 730 Coins",
     6: "6 Needles, 3 Silver, 730 Coins",
     7: "2 Sparkles, 2 Silver, 2 Gold, 1400 Coins"
+  }
+  return switcher.get(deco,"")
+
+def oasisprestige(deco):
+  switcher = {
+    1: "4 Needles, 6 Ribbons, 140 Coins",
+    2: "4 Needles, 6 Ribbons, 140 Coins",
+    3: "12 Ribbon, 4 Silver, 450 Coins",
+    4: "12 Ribbon, 4 Silver, 450 Coins",
+    5: "2 Silver, 2 Gold, 730 Coins",
+    6: "12 Needles, 6 Silver, 730 Coins",
+    7: "4 Sparkles, 4 Silver, 4 Gold, 1400 Coins"
   }
   return switcher.get(deco,"")
 
@@ -450,6 +535,18 @@ def reef(deco):
   }
   return switcher.get(deco,"")
 
+def reefprestige(deco):
+  switcher = {
+    1: "2 Amethyst, 2 Silver, 150 Coins",
+    2: "6 Needles, 6 Ribbon, 150 Coins",
+    3: "10 Needles, 4 Silver, 480 Coins",
+    4: "10 Needles, 4 Silver, 480 Coins",
+    5: "4 Silver, 2 Gold, 780 Coins",
+    6: "12 Needles, 8 Silver, 780 Coins",
+    7: "10 Silver, 2 Gold, 4 Pendant, 1500 Coins"
+  }
+  return switcher.get(deco,"")
+
 #garden - level 16
 def garden(deco):
   switcher = {
@@ -460,6 +557,18 @@ def garden(deco):
     5: "9 Needles, 1 Gold, 840 Coins",
     6: "4 Sparkles, 1 Pendant, 840 Coins",
     7: "2 Silver, 2 Gold, 2 Pendant, 1600 Coins"
+  }
+  return switcher.get(deco,"")
+
+def gardenprestige(deco):
+  switcher = {
+    1: "2 Sparkles, 8 Amethyst, 160 Coins",
+    2: "12 Amethyst, 10 Ribbon, 160 Coins",
+    3: "12 Needles, 4 Silver, 520 Coins",
+    4: "2 Silver, 2 Pendant, 520 Coins",
+    5: "18 Needles, 2 Gold, 840 Coins",
+    6: "8 Sparkles, 2 Pendant, 840 Coins",
+    7: "4 Silver, 4 Gold, 4 Pendant, 1600 Coins"
   }
   return switcher.get(deco,"")
 
@@ -476,6 +585,18 @@ def nightmare(deco):
   }
   return switcher.get(deco,"")
 
+def nightmareprestige(deco):
+  switcher = {
+    1: "6 Ribbon, 2 Silver, 170 Coins",
+    2: "10 Amethyst, 2 Sparkles, 170 Coins",
+    3: "2 Needle, 2 Gold, 550 Coins",
+    4: "6 Sparkles, 4 Silver, 550 Coins",
+    5: "8 Silver, 2 Pendant, 890 Coins",
+    6: "8 Silver, 2 Pendant, 890 Coins",
+    7: "6 Silver, 4 Gold, 4 Pendant, 1700 Coins"
+  }
+  return switcher.get(deco,"")
+
 #ocean - level 18
 def ocean(deco):
   switcher = {
@@ -486,6 +607,18 @@ def ocean(deco):
     5: "4 Silver, 1 Gold, 940 Coins",
     6: "1 Gold, 2 Pendant, 940 Coins",
     7: "4 Sparkles, 3 Silver, 3 Gold, 1800 Coins"
+  }
+  return switcher.get(deco,"")
+
+def oceanprestige(deco):
+  switcher = {
+    1: "6 Needles, 2 Sparkles, 180 Coins",
+    2: "8 Ribbon, 2 Silver, 180 Coins",
+    3: "8 Needles, 6 Silver, 580 Coins",
+    4: "2 Sparkles, 2 Gold, 580 Coins",
+    5: "8 Silver, 2 Gold, 940 Coins",
+    6: "2 Gold, 4 Pendant, 940 Coins",
+    7: "8 Sparkles, 6 Silver, 6 Gold, 1800 Coins"
   }
   return switcher.get(deco,"")
 
@@ -502,6 +635,18 @@ def pyramid(deco):
   }
   return switcher.get(deco,"")
 
+def pyramidprestige(deco):
+  switcher = {
+    1: "18 Amethyst, 20 Bronze, 190 Coins",
+    2: "18 Amethyst, 20 Bronze, 190 Coins",
+    3: "12 Needles, 2 Pendant, 610 Coins",
+    4: "4 Sparkles, 2 Pendant, 610 Coins",
+    5: "26 Needles, 2 Gold, 990 Coins",
+    6: "4 Sparkles, 4 Pendant, 990 Coins",
+    7: "6 Gold, 6 Pendant, 1900 Coins"
+  }
+  return switcher.get(deco,"")
+
 #cake - level 20
 def cake(deco):
   switcher = {
@@ -514,6 +659,19 @@ def cake(deco):
     7: "4 Water, 3 Fire, 2100 Coins"
   }
   return switcher.get(deco,"")
+
+def cakeprestige(deco):
+  switcher = {
+    1: "2 Amethyst, 2 Water, 200 Coins",
+    2: "8 Orb, 2 Silver, 200 Coins",
+    3: "8 Orb, 8 Silver, 650 Coins",
+    4: "14 Needles, 4 Water, 650 Coins",
+    5: "2 Gold, 4 Pendants, 1000 Coins",
+    6: "2 Pendant, 2 Fire, 1000 Coins",
+    7: "8 Water, 6 Fire, 2100 Coins"
+  }
+  return switcher.get(deco,"")
+
 
 #interstellar - level 21
 def interstellar(deco):
