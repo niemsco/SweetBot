@@ -103,7 +103,7 @@ def getRecipeCat(floor,deco):
     "roleplay":roleplay,"roleplayprestige":roleplayprestige,
     "bathroom":bathroom,"bathroomprestige":bathroomprestige,
     "jungle":jungle,"jungleprestige":jungleprestige,
-    "skatepark":skatepark,"skateprestige":skateprestige,
+    "skatepark":skatepark,"skateparkprestige":skateparkprestige,
     "arctic":arctic,"arcticprestige":arcticprestige,
     "detective":detective,"detectiveprestige":detectiveprestige,
     "catgamedev":catgamedev,"catgamedevprestige":catgamedevprestige,
