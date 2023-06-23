@@ -92,8 +92,8 @@ def getRecipeCat(floor,deco):
     "desert":desert,"desertprestige":desertprestige,
     "dinosaurs":dinosaurs,"dinosaursprestige":dinosaursprestige,
     "hairsalon":hairsalon,"hairsalonprestige":hairsalonprestige,
-    "heavymetal":heavymetal,"heavymetalprestige":heavymetalcakeprestige,
-    "western":western,"westernprestige":westerncakeprestige,
+    "heavymetal":heavymetal,"heavymetalprestige":heavymetalprestige,
+    "western":western,"westernprestige":westernprestige,
     "racing":racing,"racingprestige":racingprestige,
     "mysterymansion":mysterymansion,
     "stationery":stationery,  #40
