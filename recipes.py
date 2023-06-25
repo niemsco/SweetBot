@@ -66,7 +66,7 @@ def getRecipeCat(floor,deco):
     "plant":plant,"plantprestige":plantprestige,
     "forest":forest,"forestprestige":forestprestige,
     "dessert":dessert,"dessertprestige":dessertprestige,
-    "dream":dream,"dreanprestige":dreamprestige,
+    "dream":dream,"dreamprestige":dreamprestige,
     "woods":woods,"woodsprestige":woodsprestige,
     "galactic":galactic,"galacticprestige":galacticprestige,
     "eighties":eighties,"eightiesprestige":eightiesprestige,
