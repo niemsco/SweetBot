@@ -162,7 +162,8 @@ def getRecipeCat(floor,deco):
     "supercatsquad":supercatsquad, "supercatsquadprestige":supercatsquadprestige,
     "vet":vet,"vetprestige":vetprestige,
     "waterfight":waterfight,"waterfightprestige":waterfightprestige,
-    "waterpark":waterpark,"waterparkprestige":waterparkprestige
+    "waterpark":waterpark,"waterparkprestige":waterparkprestige,
+    "bentobox":bentobox,"bentoboxprestige":bentoboxprestige
 
   }
   func = switcher.get(floorSpellcheckCat(floor), lambda1)
@@ -2735,6 +2736,30 @@ def waterpark(deco):
   return switcher.get(deco,"")
 
 def waterparkprestige(deco): 
+  switcher = {
+    1: "10 Wood, 100 Coins",
+    2: "10 String, 100 Coins",
+    3: "4 Metal, 2 Needle, 320 Coins",
+    4: "4 Metal, 2 Needle, 320 Coins",
+    5: "14 String, 6 Ribbon, 520 Coins",
+    6: "16 Metal, 2 Needle, 520 Coins",
+    7: "8 Ribbon, 6 Needles, 2 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
+def bentobox(deco):
+  switcher = {
+    1: "5 Wood, 100 Coins",
+    2: "5 String, 100 Coins",
+    3: "2 Metal, 1 Needle, 320 Coins",
+    4: "2 Metal, 1 Needle, 320 Coins",
+    5: "7 String, 3 Ribbon, 520 Coins",
+    6: "8 Metal, 1 Needle, 520 Coins",
+    7: "4 Ribbon, 3 Needles, 1 Sparkles, 1000 Coins"
+  }
+  return switcher.get(deco,"")
+
+def bentoboxprestige(deco): 
   switcher = {
     1: "10 Wood, 100 Coins",
     2: "10 String, 100 Coins",
